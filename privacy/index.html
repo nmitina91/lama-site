@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lama — Privacy Policy</title>
+<meta name="description" content="Privacy Policy of the Lama iOS app: what leaves your iPhone, where it goes and how long it is kept.">
+<style>
+  :root { --canvas:#FAF7F1; --text:#1E1B16; --muted:#6B655B; --accent:#A43E2B; --rule:#E4DED2; }
+  @media (prefers-color-scheme: dark) { :root { --canvas:#111617; --text:#EDE8DF; --muted:#A39D92; --accent:#C2FA78; --rule:#2A3133; } }
+  html { background:var(--canvas); }
+  body { margin:0; padding:32px 16px 64px; color:var(--text); background:var(--canvas);
+         font:17px/1.55 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
+  main { max-width:720px; margin:0 auto; }
+  h1, h2, h3 { font-family: ui-serif, Georgia, "Times New Roman", serif; font-weight:600; line-height:1.2; }
+  h1 { font-size:2rem; margin:0 0 .25rem; }
+  h2 { font-size:1.4rem; margin:2.5rem 0 .75rem; padding-top:1.5rem; border-top:1px solid var(--rule); }
+  h3 { font-size:1.1rem; margin:1.5rem 0 .5rem; }
+  p, li { max-width:65ch; }
+  a { color:var(--accent); }
+  .meta { color:var(--muted); font-size:.95rem; margin:0 0 1.5rem; }
+  .lang { display:flex; gap:12px; font-size:.95rem; margin-bottom:2rem; }
+  table { border-collapse:collapse; width:100%; font-size:.95rem; margin:1rem 0; }
+  th, td { text-align:left; vertical-align:top; padding:.5rem .6rem; border-bottom:1px solid var(--rule); }
+  th { color:var(--muted); font-weight:600; }
+  code { font-size:.9em; }
+</style>
+</head>
+<body>
+<main>
+
+<nav class="lang" aria-label="Language"><a href="#en">English</a> · <a href="#ru">Русский</a></nav>
+
+<section id="en">
+<h1>Lama — Privacy Policy</h1>
+<p class="meta">Effective date: 19 September 2026 · Version 1</p>
+
+<p>Lama is an iPhone app that reads your EPUB books aloud and answers questions about what you have heard so far. This policy explains what leaves your device, where it goes, how long it is kept, and what you can do about it. It is written to match what the app actually does.</p>
+
+<h3>Who is responsible</h3>
+<p>The data controller is Natalia Mitina, an individual developer. Contact: <a href="mailto:nmitina91@gmail.com">nmitina91@gmail.com</a>.</p>
+
+<h2>1. The short version</h2>
+<ul>
+  <li>Lama has no accounts, no analytics, no advertising and no tracking. We do not know who you are.</li>
+  <li>Your books stay on your iPhone. The whole book, your library, contacts and location are never sent anywhere.</li>
+  <li>Cloud features (the assistant and the cloud voice) send small pieces of text to our server and on to AI providers, <strong>only after you agree</strong> on the “Cloud features” screen. You can turn them off at any time in Profile; the built‑in iPhone voice keeps reading either way.</li>
+  <li>Our server stores nothing you send. It forwards the request and forgets it.</li>
+</ul>
+
+<h2>2. What is processed and why</h2>
+<table>
+  <tr><th>Data</th><th>Purpose</th><th>When</th></tr>
+  <tr><td>The text of your question, up to 6 short excerpts of the book <em>before</em> your current position, and the last few paragraphs you heard</td><td>To answer your question without spoiling what comes next</td><td>Only when you ask the assistant a question and cloud features are on</td></tr>
+  <tr><td>The text of the passage being read aloud (one chunk at a time)</td><td>To produce the cloud voice</td><td>Only when the cloud voice is selected and cloud features are on</td></tr>
+  <tr><td>Your voice recording when you ask a question by speaking</td><td>To turn speech into text</td><td>Processed on the iPhone when iOS supports your book’s language on‑device; otherwise by Apple’s speech recognition. Only the resulting text goes to our server</td></tr>
+  <tr><td>Your IP address</td><td>Rate limiting and abuse protection on our server</td><td>With every cloud request; used transiently, not stored</td></tr>
+</table>
+<p>Never processed off‑device: the whole book, your library, reading progress, contacts, location, photos, identifiers of you or your device.</p>
+
+<h2>3. Where it goes</h2>
+<p>Cloud requests travel over HTTPS to the Lama server (<code>lama-proxy-production.up.railway.app</code>), hosted by <a href="https://railway.com/legal/privacy">Railway</a> in the European Union (Amsterdam region). The server then forwards the text to the following processors:</p>
+<table>
+  <tr><th>Recipient</th><th>What</th><th>Their policy</th></tr>
+  <tr><td>Anthropic (Claude models)</td><td>Your question and the excerpts, to generate the answer</td><td><a href="https://www.anthropic.com/legal/privacy">Privacy Policy</a>, <a href="https://www.anthropic.com/legal/commercial-terms">Commercial Terms</a></td></tr>
+  <tr><td>OpenRouter</td><td>The text of the passage, routed to the speech‑model vendor</td><td><a href="https://openrouter.ai/privacy">Privacy Policy</a></td></tr>
+  <tr><td>Alibaba Cloud (Qwen speech model, via OpenRouter)</td><td>The text of the passage, to synthesize the audio</td><td><a href="https://www.alibabacloud.com/help/en/legal/latest/privacy-policy">Privacy Policy</a></td></tr>
+  <tr><td>Apple</td><td>Your voice recording, only when on‑device recognition is not available for the language</td><td><a href="https://www.apple.com/legal/privacy/">Apple Privacy</a>; Apple’s speech recognition is governed by iOS</td></tr>
+</table>
+<p>The AI model and voice are chosen on our server. If we switch to a different provider, we will update this policy and the app will ask for your consent again.</p>
+
+<h2>4. How long it is kept</h2>
+<ul>
+  <li><strong>Our server:</strong> nothing is stored — not books, not questions, not audio. Logs contain only technical identifiers, status codes and sizes, never text.</li>
+  <li><strong>On your iPhone:</strong> the history of questions and answers, and a cache of already‑synthesized audio. You can delete history entries in History, clear the voice cache in voice settings, and remove everything by deleting the app. Nothing is backed up to iCloud by the audio cache.</li>
+  <li><strong>Anthropic:</strong> API inputs and outputs are not used to train models and are retained for a limited period under Anthropic’s Commercial Terms.</li>
+  <li><strong>OpenRouter and Alibaba Cloud:</strong> the text is processed to produce the audio. We keep OpenRouter’s optional prompt logging switched off for our account; the vendor’s own retention follows its policy.</li>
+  <li><strong>Apple:</strong> per Apple’s speech‑recognition terms shown in iOS.</li>
+</ul>
+
+<h2>5. Your choices and rights</h2>
+<ul>
+  <li>Cloud features are off until you agree, and you can switch them off at any time in <em>Profile → Cloud features</em>. New requests stop immediately.</li>
+  <li>You can delete history entries and the voice cache inside the app, or delete the app to remove everything.</li>
+  <li>For users in the European Economic Area and the United Kingdom: the legal basis for cloud processing is your consent (GDPR Art. 6(1)(a)), which you can withdraw as described above. You have the rights of access, rectification, erasure, restriction, portability and to lodge a complaint with a supervisory authority. Because we hold no data about you, most requests are satisfied by the in‑app controls; for anything else, write to us.</li>
+  <li>For users in Russia: processing is based on your consent under Federal Law No. 152‑FZ; the same in‑app controls and contact apply.</li>
+  <li>Questions or requests: <a href="mailto:nmitina91@gmail.com">nmitina91@gmail.com</a>.</li>
+</ul>
+
+<h2>6. Children</h2>
+<p>Lama is not directed at children and is not intended for anyone under 18. We do not knowingly process data of minors.</p>
+
+<h2>7. What Lama does not do</h2>
+<p>No user accounts. No analytics or crash‑reporting SDKs. No advertising. No tracking across apps or websites (the app declares <code>NSPrivacyTracking = false</code>). No selling or sharing of data for marketing.</p>
+
+<h2>8. Changes</h2>
+<p>Updates are published at this address with a new effective date. If a change adds a new recipient of your text, the app will show the consent screen again before sending anything.</p>
+</section>
+
+<section id="ru">
+<h1>Лама — Политика конфиденциальности</h1>
+<p class="meta">Действует с 19 сентября 2026 г. · Версия 1</p>
+
+<p>Лама — приложение для iPhone, которое читает вслух ваши книги в формате EPUB и отвечает на вопросы о том, что вы уже услышали. Здесь описано, что покидает ваше устройство, куда уходит, сколько хранится и что вы можете с этим сделать. Текст соответствует тому, что приложение делает на самом деле.</p>
+
+<h3>Кто отвечает за обработку</h3>
+<p>Оператор — Наталья Митина, индивидуальный разработчик. Связь: <a href="mailto:nmitina91@gmail.com">nmitina91@gmail.com</a>.</p>
+
+<h2>1. Коротко</h2>
+<ul>
+  <li>В Ламе нет аккаунтов, аналитики, рекламы и трекинга. Мы не знаем, кто вы.</li>
+  <li>Книги остаются на iPhone. Книга целиком, библиотека, контакты и геолокация никуда не отправляются.</li>
+  <li>Облачные функции (ассистент и облачный голос) отправляют небольшие фрагменты текста на наш сервер и далее провайдерам AI — <strong>только после вашего согласия</strong> на экране «Облачные функции». Отключить их можно в любой момент в Профиле; встроенный голос iPhone читает в любом случае.</li>
+  <li>Наш сервер ничего не хранит: передаёт запрос и забывает его.</li>
+</ul>
+
+<h2>2. Что обрабатывается и зачем</h2>
+<table>
+  <tr><th>Данные</th><th>Цель</th><th>Когда</th></tr>
+  <tr><td>Текст вопроса, до 6 коротких отрывков книги <em>до</em> текущей позиции и последние услышанные абзацы</td><td>Ответить на вопрос без спойлеров</td><td>Только когда вы задаёте вопрос ассистенту и облачные функции включены</td></tr>
+  <tr><td>Текст читаемого фрагмента (по одному отрывку)</td><td>Синтезировать облачный голос</td><td>Только когда выбран облачный голос и облачные функции включены</td></tr>
+  <tr><td>Запись голоса, когда вы задаёте вопрос вслух</td><td>Преобразовать речь в текст</td><td>Обрабатывается на iPhone, если iOS поддерживает язык книги офлайн; иначе — распознаванием речи Apple. На наш сервер уходит только полученный текст</td></tr>
+  <tr><td>IP‑адрес</td><td>Ограничение частоты запросов и защита от злоупотреблений</td><td>При каждом облачном запросе; используется в момент запроса, не сохраняется</td></tr>
+</table>
+<p>Никогда не покидают устройство: книга целиком, библиотека, прогресс чтения, контакты, геолокация, фото, идентификаторы вас или устройства.</p>
+
+<h2>3. Куда уходят данные</h2>
+<p>Облачные запросы идут по HTTPS на сервер Ламы (<code>lama-proxy-production.up.railway.app</code>), размещённый у <a href="https://railway.com/legal/privacy">Railway</a> в Европейском союзе (регион Амстердам). Далее сервер передаёт текст следующим обработчикам:</p>
+<table>
+  <tr><th>Получатель</th><th>Что</th><th>Политика</th></tr>
+  <tr><td>Anthropic (модели Claude)</td><td>Вопрос и отрывки — для формирования ответа</td><td><a href="https://www.anthropic.com/legal/privacy">Privacy Policy</a>, <a href="https://www.anthropic.com/legal/commercial-terms">Commercial Terms</a></td></tr>
+  <tr><td>OpenRouter</td><td>Текст фрагмента — маршрутизация к поставщику речевой модели</td><td><a href="https://openrouter.ai/privacy">Privacy Policy</a></td></tr>
+  <tr><td>Alibaba Cloud (речевая модель Qwen, через OpenRouter)</td><td>Текст фрагмента — синтез аудио</td><td><a href="https://www.alibabacloud.com/help/en/legal/latest/privacy-policy">Privacy Policy</a></td></tr>
+  <tr><td>Apple</td><td>Запись голоса — только если офлайн‑распознавание для языка недоступно</td><td><a href="https://www.apple.com/legal/privacy/">Apple Privacy</a>; распознавание речи регулируется iOS</td></tr>
+</table>
+<p>Модель и голос выбираются на нашем сервере. Если мы сменим провайдера, мы обновим эту политику, а приложение снова запросит согласие.</p>
+
+<h2>4. Сколько хранится</h2>
+<ul>
+  <li><strong>Наш сервер:</strong> ничего не хранится — ни книги, ни вопросы, ни аудио. В логах только технические идентификаторы, коды и размеры, никогда — текст.</li>
+  <li><strong>На вашем iPhone:</strong> история вопросов и ответов и кеш уже синтезированного аудио. Записи истории удаляются в разделе «История», кеш голоса — в настройках голоса; удаление приложения удаляет всё. Кеш аудио не попадает в резервные копии iCloud.</li>
+  <li><strong>Anthropic:</strong> данные API не используются для обучения моделей и хранятся ограниченное время согласно Commercial Terms Anthropic.</li>
+  <li><strong>OpenRouter и Alibaba Cloud:</strong> текст обрабатывается для получения аудио. Необязательное логирование запросов в нашем аккаунте OpenRouter отключено; сроки у поставщика модели — по его политике.</li>
+  <li><strong>Apple:</strong> по условиям распознавания речи Apple, показанным в iOS.</li>
+</ul>
+
+<h2>5. Ваш выбор и права</h2>
+<ul>
+  <li>Облачные функции выключены, пока вы не согласитесь, и их можно отключить в любой момент в <em>Профиль → Облачные функции</em>. Новые запросы прекращаются сразу.</li>
+  <li>Историю и кеш голоса можно удалить в приложении; удаление приложения удаляет всё.</li>
+  <li>Для пользователей из ЕЭЗ и Великобритании: правовое основание облачной обработки — ваше согласие (ст. 6(1)(a) GDPR), которое можно отозвать описанным выше способом. У вас есть права на доступ, исправление, удаление, ограничение, переносимость и на жалобу в надзорный орган. Поскольку мы не храним данных о вас, большинство запросов исполняется средствами приложения; в остальных случаях напишите нам.</li>
+  <li>Для пользователей из России: обработка ведётся на основании вашего согласия в соответствии с 152‑ФЗ «О персональных данных»; действуют те же средства в приложении и тот же контакт.</li>
+  <li>Вопросы и обращения: <a href="mailto:nmitina91@gmail.com">nmitina91@gmail.com</a>.</li>
+</ul>
+
+<h2>6. Дети</h2>
+<p>Лама не предназначена для детей и не рассчитана на лиц младше 18 лет. Мы сознательно не обрабатываем данные несовершеннолетних.</p>
+
+<h2>7. Чего Лама не делает</h2>
+<p>Нет аккаунтов. Нет SDK аналитики и сбора крэшей. Нет рекламы. Нет трекинга между приложениями и сайтами (в приложении заявлено <code>NSPrivacyTracking = false</code>). Данные не продаются и не передаются для маркетинга.</p>
+
+<h2>8. Изменения</h2>
+<p>Обновления публикуются по этому адресу с новой датой. Если изменение добавляет нового получателя вашего текста, приложение снова покажет экран согласия, прежде чем что‑то отправить.</p>
+</section>
+
+</main>
+</body>
+</html>
