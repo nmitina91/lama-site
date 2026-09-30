@@ -33,7 +33,7 @@
 
 <section id="en">
 <h1>Lama — Privacy Policy</h1>
-<p class="meta">Effective date: 19 September 2026 · Version 1</p>
+<p class="meta">Effective date: 30 September 2026 · Version 1.1 (previous version: 19 September 2026)</p>
 
 <p>Lama is an iPhone app that reads your EPUB books aloud and answers questions about what you have heard so far. This policy explains what leaves your device, where it goes, how long it is kept, and what you can do about it. It is written to match what the app actually does.</p>
 
@@ -74,7 +74,8 @@
   <li><strong>Our server:</strong> nothing is stored — not books, not questions, not audio. Logs contain only technical identifiers, status codes and sizes, never text.</li>
   <li><strong>On your iPhone:</strong> the history of questions and answers, and a cache of already‑synthesized audio. You can delete history entries in History, clear the voice cache in voice settings, and remove everything by deleting the app. Nothing is backed up to iCloud by the audio cache.</li>
   <li><strong>Anthropic:</strong> API inputs and outputs are not used to train models and are retained for a limited period under Anthropic’s Commercial Terms.</li>
-  <li><strong>OpenRouter and Alibaba Cloud:</strong> the text is processed to produce the audio. We keep OpenRouter’s optional prompt logging switched off for our account; the vendor’s own retention follows its policy.</li>
+  <li><strong>OpenRouter:</strong> prompt storage is opt‑in and off by default; we keep both optional settings (“Private Input &amp; Output Logging” and “OpenRouter Use of Inputs/Outputs”) off for our account, so OpenRouter retains only request metadata such as token counts and latency, not the text.</li>
+  <li><strong>Alibaba Cloud (the speech model):</strong> according to OpenRouter’s published <a href="https://openrouter.ai/docs/guides/privacy/provider-logging">provider data policies</a>, this provider does not train on prompts, and the period for which it retains them is not stated. What we send there is a passage of the book you are listening to — never your question, your library or anything identifying you.</li>
   <li><strong>Apple:</strong> per Apple’s speech‑recognition terms shown in iOS.</li>
 </ul>
 
@@ -99,7 +100,7 @@
 
 <section id="ru">
 <h1>Лама — Политика конфиденциальности</h1>
-<p class="meta">Действует с 19 сентября 2026 г. · Версия 1</p>
+<p class="meta">Действует с 30 сентября 2026 г. · Версия 1.1 (предыдущая редакция: 19 сентября 2026 г.)</p>
 
 <p>Лама — приложение для iPhone, которое читает вслух ваши книги в формате EPUB и отвечает на вопросы о том, что вы уже услышали. Здесь описано, что покидает ваше устройство, куда уходит, сколько хранится и что вы можете с этим сделать. Текст соответствует тому, что приложение делает на самом деле.</p>
 
@@ -140,7 +141,8 @@
   <li><strong>Наш сервер:</strong> ничего не хранится — ни книги, ни вопросы, ни аудио. В логах только технические идентификаторы, коды и размеры, никогда — текст.</li>
   <li><strong>На вашем iPhone:</strong> история вопросов и ответов и кеш уже синтезированного аудио. Записи истории удаляются в разделе «История», кеш голоса — в настройках голоса; удаление приложения удаляет всё. Кеш аудио не попадает в резервные копии iCloud.</li>
   <li><strong>Anthropic:</strong> данные API не используются для обучения моделей и хранятся ограниченное время согласно Commercial Terms Anthropic.</li>
-  <li><strong>OpenRouter и Alibaba Cloud:</strong> текст обрабатывается для получения аудио. Необязательное логирование запросов в нашем аккаунте OpenRouter отключено; сроки у поставщика модели — по его политике.</li>
+  <li><strong>OpenRouter:</strong> хранение запросов включается только явно и по умолчанию выключено; обе необязательные настройки («Private Input &amp; Output Logging» и «OpenRouter Use of Inputs/Outputs») в нашем аккаунте выключены, поэтому OpenRouter сохраняет только метаданные запроса (число токенов, задержка), а не текст.</li>
+  <li><strong>Alibaba Cloud (речевая модель):</strong> по опубликованной OpenRouter <a href="https://openrouter.ai/docs/guides/privacy/provider-logging">таблице политик провайдеров</a>, этот поставщик не обучается на запросах, а срок их хранения не указан. Туда уходит отрывок книги, которую вы слушаете, — никогда ваш вопрос, библиотека или что-либо, идентифицирующее вас.</li>
   <li><strong>Apple:</strong> по условиям распознавания речи Apple, показанным в iOS.</li>
 </ul>
 
